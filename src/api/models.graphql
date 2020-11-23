@@ -29,6 +29,7 @@ type Post {
   user: User!
   files: [File!]!
   likes: [Like!]!
+  likeCount: Int
   comments: [Comment!]!
   isLiked: Boolean!
   createdAt: String
