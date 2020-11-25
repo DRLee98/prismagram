@@ -26,7 +26,7 @@ export const authenticateJwt = (req, res, next) =>
       req.user = user;
     }
     next();
-  });
+  })(req, res, next);
 
 passport.use(new Strategy(jwtOptions, verifyUser));
 passport.initialize();
